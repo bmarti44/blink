@@ -1,0 +1,124 @@
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+/* Individual Toast */
+.toast {
+  --toast-bg: #312d2a;
+  --toast-border: #697778;
+  --toast-text: #f1efed;
+  --toast-text-secondary: #c2d4d4;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--toast-bg);
+  border: 1px solid var(--toast-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  animation: toast-slide-in 0.3s ease-out;
+  min-width: 280px;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Toast Types */
+.toast--success {
+  border-left: 4px solid #4caf50;
+}
+
+.toast--success .toast__icon {
+  color: #4caf50;
+}
+
+.toast--error {
+  border-left: 4px solid #c74634;
+}
+
+.toast--error .toast__icon {
+  color: #c74634;
+}
+
+.toast--warning {
+  border-left: 4px solid #f1b13f;
+}
+
+.toast--warning .toast__icon {
+  color: #f1b13f;
+}
+
+.toast--info {
+  border-left: 4px solid #2196f3;
+}
+
+.toast--info .toast__icon {
+  color: #2196f3;
+}
+
+/* Toast Icon */
+.toast__icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Toast Content */
+.toast__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast__title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--toast-text);
+  margin-bottom: 2px;
+}
+
+.toast__message {
+  font-size: 13px;
+  color: var(--toast-text-secondary);
+  line-height: 1.4;
+}
+
+/* Toast Close Button */
+.toast__close {
+  background: none;
+  border: none;
+  color: var(--toast-text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  margin: -4px -4px -4px 0;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast__close:hover {
+  color: var(--toast-text);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toast__close span {
+  font-size: 14px;
+}

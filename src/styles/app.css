@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1e1e1e;
+}
+
+#app {
+  width: 100%;
+  height: calc(100% - 8px); /* subtract title bar overlap */
+  margin-top: 8px;
+  background-color: #1e1e1e;
+}
+
+:root {
+  --light-palette-lilac-10: #f8f9ff;
+  --light-palette-lilac-20: #f2f4fe;
+  --light-palette-lilac-30: #ebeffe;
+  --light-palette-lilac-40: #dbe1f5;
+  --light-palette-lilac-50: #c6cfeb;
+  --light-palette-lilac-60: #adb6d2;
+  --light-palette-lilac-70: #a0a9c5;
+  --light-palette-lilac-80: #8f98b7;
+  --light-palette-lilac-90: #7c85a4;
+  --light-palette-lilac-100: #6b7494;
+  --light-palette-lilac-110: #606988;
+  --light-palette-lilac-120: #585f80;
+  --light-palette-lilac-130: #4f5573;
+  --light-palette-lilac-140: #464c68;
+  --light-palette-lilac-150: #3c425b;
+  --light-palette-lilac-160: #30364c;
+  --light-palette-lilac-170: #2a2d3f;
+  --light-palette-lilac-180: #1b1f2b;
+  --light-palette-lilac-190: #13151d;
+}

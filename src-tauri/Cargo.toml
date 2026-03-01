@@ -1,0 +1,66 @@
+[package]
+name = "blink"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "blink_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-updater = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Document processing
+docx-rs = "0.4"
+calamine = "0.24"
+rust_xlsxwriter = "0.79"
+zip = "2"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Error handling
+thiserror = "1"
+
+# Test server (debug builds only)
+axum = "0.7"
+tower = "0.5"
+tower-http = { version = "0.5", features = ["cors"] }
+urlencoding = "2"
+reqwest = { version = "0.12", features = ["json"] }
+open = "5"
+
+# For Python subprocess (PowerPoint)
+which = "7"
+
+# Terminal/PTY support
+portable-pty = "0.8"
+parking_lot = "0.12"
+
+# Shell/process spawning for sidecar
+tauri-plugin-shell = "2"
+
+# OpenVSCode server implementation
+chrono = "0.4"
+async-trait = "0.1"
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tempfile = "3"
+

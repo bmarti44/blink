@@ -1,0 +1,94 @@
+/**
+ * VS Code Workbench Styles
+ */
+
+.vscode-workbench {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #1e1e1e;
+}
+
+.vscode-workbench__container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading state */
+.vscode-workbench__loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #1e1e1e;
+  color: #cccccc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.vscode-workbench__loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #3c3c3c;
+  border-top-color: #0e639c;
+  border-radius: 50%;
+  animation: vscode-spin 1s linear infinite;
+}
+
+@keyframes vscode-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state */
+.vscode-workbench--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vscode-workbench__error-content {
+  text-align: center;
+  padding: 32px;
+  background-color: #252526;
+  border-radius: 8px;
+  color: #cccccc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.vscode-workbench__error-content h2 {
+  margin: 0 0 16px;
+  color: #f48771;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.vscode-workbench__error-content p {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.vscode-workbench__error-content button {
+  padding: 8px 16px;
+  background-color: #0e639c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.vscode-workbench__error-content button:hover {
+  background-color: #1177bb;
+}

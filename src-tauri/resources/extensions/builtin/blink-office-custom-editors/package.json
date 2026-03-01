@@ -1,0 +1,64 @@
+{
+  "name": "blink-office-custom-editors",
+  "displayName": "Blink Office Custom Editors",
+  "publisher": "blink",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:blink.docxBinary",
+    "onCustomEditor:blink.xlsxBinary",
+    "onCustomEditor:blink.pptxBinary"
+  ],
+  "main": "dist/extension.js",
+  "browser": "dist/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "blink.docxBinary",
+        "displayName": "Blink DOCX Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.docx"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "blink.xlsxBinary",
+        "displayName": "Blink XLSX Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.xlsx"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "blink.pptxBinary",
+        "displayName": "Blink PPTX Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.pptx"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  },
+  "description": "Blink Office Custom Editors (DOCX/XLSX/PPTX)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "esbuild": "^0.27.2"
+  }
+}

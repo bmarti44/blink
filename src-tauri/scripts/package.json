@@ -1,0 +1,14 @@
+{
+  "name": "blink-pptx-service",
+  "version": "1.0.0",
+  "description": "PowerPoint processing service for Blink",
+  "main": "pptx-service.js",
+  "scripts": {
+    "start": "node pptx-service.js",
+    "test": "node pptx-service.js version"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "pptxgenjs": "^3.12.0"
+  }
+}

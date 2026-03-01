@@ -1,0 +1,20 @@
+{
+  "name": "blink-dark-theme",
+  "displayName": "Blink Dark",
+  "description": "Dark theme with Blink brand colors",
+  "version": "1.0.0",
+  "publisher": "blink",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Blink Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blink-dark.json"
+      }
+    ]
+  }
+}

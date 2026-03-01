@@ -1,0 +1,22 @@
+/* Loading Spinner */
+.splash-spinner {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.splash-spinner-svg {
+  width: 48px;
+  height: 48px;
+  animation: splash-spin 1s linear infinite;
+  color: #c74634;
+}
+
+@keyframes splash-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

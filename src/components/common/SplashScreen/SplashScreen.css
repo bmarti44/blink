@@ -1,0 +1,192 @@
+.blink-logo {
+  fill: #ca4d3c;
+  width: 75px;
+}
+
+/* Splash Screen Overlay */
+.splash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #312d2a; /* dark */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.splash-overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Soft background accent */
+.splash-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(199, 70, 52, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Content layout */
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.splash-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.splash-logo {
+  display: flex;
+  align-items: center;
+}
+
+.splash-divider {
+  width: 2px;
+  height: 64px;
+  background-color: #697778; /* Slate 100 */
+}
+
+.splash-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.splash-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  color: #f1efed; /* Neutral 30 */
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.splash-tagline {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #c2d4d4; /* Slate 50 */
+  letter-spacing: 0.5px;
+}
+
+/* Loading area */
+.splash-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 300px;
+}
+
+/* Progress bar */
+.splash-progress {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(105, 119, 120, 0.3); /* Slate 100 w/ opacity */
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.splash-progress-value {
+  height: 100%;
+  background-color: #c74634;
+  border-radius: 2px;
+  transition: width 0.3s ease-out;
+}
+
+/* Width buckets (5% increments) to avoid inline styles */
+.w-0 {
+  width: 0%;
+}
+.w-5 {
+  width: 5%;
+}
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-35 {
+  width: 35%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-45 {
+  width: 45%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-55 {
+  width: 55%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-65 {
+  width: 65%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-85 {
+  width: 85%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-95 {
+  width: 95%;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* Loading message */
+.loading-message {
+  margin: 0;
+  font-size: 14px;
+  color: #c2d4d4; /* Slate 50 */
+  font-weight: 400;
+}

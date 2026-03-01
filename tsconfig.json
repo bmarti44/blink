@@ -1,0 +1,27 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "target": "ES2021",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "ignoreDeprecations": "5.0",
+    "verbatimModuleSyntax": true,
+    "strictNullChecks": true,
+    "lib": ["esnext", "es2015", "ES2017", "dom", "es2015.iterable", "esnext.asynciterable", "dom.iterable"],
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "noEmitOnError": false,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["**/dist/**", "**/node_modules/**", "**/files/**", "**/cypress/**", "./cypress.config.ts", "**/*.stories.tsx", "**/web/**"]
+}
